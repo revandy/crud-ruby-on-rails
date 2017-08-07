@@ -1,0 +1,3 @@
+class Diaryku < ApplicationRecord
+	
+end

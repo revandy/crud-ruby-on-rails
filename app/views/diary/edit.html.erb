@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Edit</title>
+</head>
+<body>
+	<%= form_for @diary, url: {action: "update"},html: {class: "form"} do |s| %>
+	 <p>
+		<%= s.label(:nama) %>
+		<%= s.text_field :nama %>
+	</p>
+	<p>
+		<%= s.label(:catatan) %>
+		<%= s.text_area :catatan %>
+	</p>
+	<p>
+		<%= s.label(:lokasi) %>
+		<%= s.text_field :lokasi %>
+	</p>
+	<p>
+		<%= s.submit "Update" %>
+	</p>
+	<%  end %>
+</body>
+</html>

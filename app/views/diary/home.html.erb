@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Index</title>
+</head>
+<body>
+<table align="center" border="1">
+	<tr>
+	
+		<th>Nama Penulis</th>
+		<th>Catatan</th>
+		<th>Lokasi</th>
+		<th colspan="2">Action</th>
+	</tr>
+	<% @diary.each do |s| %>
+	<tr>
+		<td><%= s.nama %></td>
+		<td><%= s.catatan %></td>
+		<td><%= s.lokasi %></td>
+		<td><%= link_to "Edit", controller: "diary", action: "edit", id:s.id %></td>
+		<td><%= link_to "Delete", controller: "diary", action: "delete", id:s.id %></td>
+</tr>
+
+	<% end %>
+		<%= link_to 'Catatan baru', "diary/new" %>
+
+</table>
+
+
+</body>
+</html>

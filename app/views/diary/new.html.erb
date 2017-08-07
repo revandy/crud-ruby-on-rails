@@ -1,0 +1,24 @@
+<h1>Create Rubby On Rails</h1>
+
+<%= form_for @diary, url: diary_create_path()  do |s| %>
+
+
+	<p>
+		<%= s.label(:nama) %>
+		<%= s.text_field :nama %>
+	</p>
+	<p>
+		<%= s.label(:catatan) %>
+		<%= s.text_area :catatan %>
+	</p>
+	<p>
+		<%= s.label(:lokasi) %>
+		<%= s.text_field :lokasi %>
+	</p>
+	<p>
+		<%= s.submit "Add" %>
+	</p>
+
+
+
+<% end %>
