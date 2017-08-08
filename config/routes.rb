@@ -6,4 +6,14 @@ Rails.application.routes.draw do
   get 'diary/:id/edit' => 'diary#edit', as: :edit
   patch 'diary/:id/' => 'diary#update'
   get 'diary/:id/delete' => 'diary#delete'
+
+
+#Api Controller
+	namespace 'api' do
+  		get 'diary' => 'diary#index'
+  		get 'diary/:id' => 'diary#show'
+  		post 'diary/new' => 'diary#create'
+	end
+
+
 end

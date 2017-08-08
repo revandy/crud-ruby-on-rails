@@ -1,7 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>New Data</title>
+</head>
+<body>
 <h1>Create Rubby On Rails</h1>
 
 <%= form_for @diary, url: diary_create_path()  do |s| %>
-
+<% if @diary.errors.any? %>
+	<% @diary.errors.full_messages.each do |message| %>
+		<pre>
+			<%= message %>
+		</pre>
+	<% end %>
+<% end %>
 
 	<p>
 		<%= s.label(:nama) %>
@@ -22,3 +34,5 @@
 
 
 <% end %>
+</body>
+</html>

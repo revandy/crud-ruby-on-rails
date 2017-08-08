@@ -26,7 +26,6 @@ class DiaryController < ApplicationController
 			redirect_to '/diary'
 		else
 			render '/diary'
-			
 		end
 	end
 
@@ -39,9 +38,7 @@ class DiaryController < ApplicationController
 
 	private 
   	def diary_params 
-    	params.require(:diaryku).permit(:nama, :catatan, :lokasi) 
+    	params.require(:diaryku).permit(:nama, :catatan, :lokasi) #kalau istilah kaya diframework php laravel ini $requestnya
   	end
-
-
 
 end
